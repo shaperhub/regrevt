@@ -1,7 +1,10 @@
 import React from 'react'
 import Bannerpic from '../public/assets/cloudstorage.gif'
 import Image from 'next/image'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
+AOS.init();
 const Banner = () => {
   return (
     <div>
