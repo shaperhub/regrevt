@@ -12,8 +12,8 @@ export default function Home() {
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
         
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <link rel="preload" as="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="preload" as="script" href="https://unpkg.com/aos@next/dist/aos.js" />
         <script>
     	    AOS.init();
         </script>
