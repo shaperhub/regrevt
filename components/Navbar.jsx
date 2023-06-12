@@ -28,16 +28,16 @@ const Navbar = () => {
                   : 'ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out'}
                   >Home</li>
                 </Link>
-                <Link href='/about'>
+                <Link href='#about1'>
                   <li id='about' 
-                  className={router.pathname == '/about' 
+                  className={router.pathname == '/#about1' 
                   ? 'active ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out' 
                   : 'ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out'}
                   >About</li>
                 </Link>
-                <Link href='/services'>
+                <Link href='#services1'>
                   <li id='services' 
-                  className={router.pathname == '/services' 
+                  className={router.pathname == '/#services1' 
                   ? 'active ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out' 
                   : 'ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out'}
                   >Services</li>
@@ -49,13 +49,13 @@ const Navbar = () => {
                   : 'ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out'}
                   >Case Studies</li>
                 </Link> */}
-                <Link href='/contact'>
+                {/* <Link href='/contact'>
                   <li id='contact' 
                   className={router.pathname == '/contact' 
                   ? 'active ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out' 
                   : 'ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out'}
                   >Contact</li>
-                </Link>
+                </Link> */}
               </ul>
 
               {/* Hamburger Icon */}
@@ -89,18 +89,18 @@ const Navbar = () => {
                 <Link href='/'>
                   <li onClick={() => setNav(false)} id='home' className='py-4 text-sm'>Home</li>
                 </Link>
-                <Link href='/about'>
+                <Link href='#about1'>
                   <li onClick={() => setNav(false)} id='about' className='py-4 text-sm'>About</li>
                 </Link>
-                <Link href='/services'>
+                <Link href='#services1'>
                   <li onClick={() => setNav(false)} id='services' className='py-4 text-sm'>Services</li>
                 </Link>
                 {/* <Link href='/casestudies'>
                   <li onClick={() => setNav(false)} id='casestudies' className='py-4 text-sm'>Case Studies</li>
                 </Link> */}
-                <Link href='/contact'>
+                {/* <Link href='/contact'>
                   <li onClick={() => setNav(false)} id='contact' className='py-4 text-sm'>Contact</li>
-                </Link>
+                </Link> */}
                   
               </ul>
             </div>
