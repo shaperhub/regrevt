@@ -1,6 +1,9 @@
 import React from 'react'
-import Bannerpic from '../public/assets/cloudstorage.gif'
 import Image from 'next/image'
+import CloudLot from '../public/assets/cloudlot.json'
+import Awspartnerlogo from '../public/assets/awspartner.jpeg'
+import Lottie from 'lottie-react'
+import Link from 'next/link'
 
 const Banner = () => {
   return (
@@ -9,30 +12,33 @@ const Banner = () => {
         <div className="bg-cream pt-20">
             <div className="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
                 { /*Left Col */ }
-                <div className="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
-                    <h1 data-aos="fade-right" data-aos-once="true" className="my-4 text-5xl font-bold leading-tight text-darken">
-                        Welcome to <br /><span className="text-yellow-500">Regrev Technology</span>
+                <div className="flex flex-col w-full items-center text-center lg:pt-24 lg:items-start lg:text-left mb-5 md:mb-0">
+                    <h1 data-aos="fade-right" data-aos-once="true" className="text-5xl font-bold leading-tight text-darken">
+                        Welcome to
+                    </h1>
+                    <h1 data-aos="fade-right" data-aos-once="true" className="text-yellow-500 text-5xl font-bold leading-tight mb-8">
+                        Regrev Technology
                     </h1>
                     <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" className="leading-normal text-2xl mb-8">This is the best place for your cloud-based infrastructure and services</p>
                     <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" className="font-bold leading-normal text-2xl mb-8">We are a member of AWS Partner Network</p>
                     <div data-aos="fade-up" data-aos-once="true" data-aos-delay="700" className="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
-                        <button className="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
+                        <Link href='/services'><button className="lg:mx-0 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
                             Our Services
-                        </button>
+                        </button></Link>
                         <div className="flex items-center justify-center space-x-3 mt-5 md:mt-0 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
-                            <button className="bg-white w-14 h-14 rounded-full flex items-center justify-center">
+                            <button className="w-14 h-14 rounded-full flex items-center justify-center">
                                 <svg className="w-5 h-5 ml-2" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M22.5751 12.8097C23.2212 13.1983 23.2212 14.135 22.5751 14.5236L1.51538 27.1891C0.848878 27.5899 5.91205e-07 27.1099 6.25202e-07 26.3321L1.73245e-06 1.00123C1.76645e-06 0.223477 0.848877 -0.256572 1.51538 0.14427L22.5751 12.8097Z" fill="#23BDEE"/>
                                 </svg>
                             </button>
-                            <span className="cursor-pointer">See our works</span>
+                            <Link href='/about'><span className="cursor-pointer">About Us</span></Link>
                         </div>
                     </div>
                 </div>
                 { /* Right Col */ }
-                <div className="w-full lg:w-6/12 pt-28" id="girl">
+                <div className="w-full lg:w-6/12 pt-18">
                     <div data-aos="fade-up" data-aos-once="true">
-                        <Image src={Bannerpic} alt="/" width='444' height='444'/>
+                        <Lottie animationData={CloudLot} loop={true} />
                     </div>
                 </div>
             </div>
@@ -53,7 +59,7 @@ const Banner = () => {
                 <p className="leading-relaxed text-gray-500">Regrev Technology provides cloud solutions to help businesses succeed in the modern world.</p>
             </div>
             { /* card 1*/ }
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-14 md:gap-5 mt-20 mb-14">
+            <div className="grid xl:grid-cols-4 md:grid-cols-2 gap-14 md:gap-5 mt-20 mb-14">
                 <div data-aos="fade-up" className="bg-white shadow-xl p-6 text-center rounded-xl">
                     <div className="bg-[#5B72EE] rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
                         <svg className="w-6 h-6 text-white" viewBox="0 0 33 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +110,7 @@ const Banner = () => {
             </div>
 
             { /* card 2*/ }
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-14 md:gap-5 mt-20 mb-14">
+            <div className="grid xl:grid-cols-4 md:grid-cols-2 gap-14 md:gap-5 mt-20 mb-14">
                 <div data-aos="fade-up" className="bg-white shadow-xl p-6 text-center rounded-xl">
                     <div className="bg-[#5B72EE] rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
                         <svg className="w-6 h-6 text-white" viewBox="0 0 33 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,6 +160,12 @@ const Banner = () => {
                 </div>
             </div>
         </div> 
+
+        {/* Contact Us small section with link to the Contact page */}
+        <div></div>
+
+        {/* Footer */}
+        <div></div>
 
     </div>
 

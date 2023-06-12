@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import {AiOutlineClose, AiOutlineMenu, AiOutlineMail} from 'react-icons/ai'
-import {FaLinkedinIn, FaGithub} from 'react-icons/fa'
-import {BsFillPersonFill} from 'react-icons/bs'
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import Navlog from '../public/assets/RTLogo1notitle.png'
 import { useRouter } from 'next/router'
 
@@ -15,25 +13,6 @@ const Navbar = () => {
     setNav(!nav)
   }
 
-  // useEffect(() => {
-  //   if (router.asPath === '/') {
-  //     document.home.classList.add('active');
-  //   } 
-  //   else if(router.asPath === '/about') {
-  //     document.about.classList.add('active');
-  //   }
-  //   else if(router.asPath === '/services') {
-  //     document.services.classList.add('active');
-  //   }
-  //   else if(router.asPath === '/casestudies') {
-  //     document.casestudies.classList.add('active');
-  //   }
-  //   else if(router.asPath === '/contact') {
-  //     document.contact.classList.add('active');
-  //   }
-  // }, [router]);
-
-
   return (
     <div className='fixed w-full h-16 bg-white shadow-xl z-[100]'>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
@@ -41,7 +20,7 @@ const Navbar = () => {
                 <Image src={Navlog} alt="/" width='120' height='120' />
             </Link>
             <div>
-              <ul className='hidden md:flex'>
+              <ul className='hidden md:flex pr-4'>
                 <Link href='/'>
                   <li id='home' 
                   className={router.pathname == '/' 
@@ -63,13 +42,13 @@ const Navbar = () => {
                   : 'ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out'}
                   >Services</li>
                 </Link>
-                <Link href='/casestudies'>
+                {/* <Link href='/casestudies'>
                   <li id='casestudies' 
                   className={router.pathname == '/casestudies' 
                   ? 'active ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out' 
                   : 'ml-10 p-0.5 text-sm uppercase hover:border-b-2 border-blue-500 hover:scale-110 duration-200 ease-in-out'}
                   >Case Studies</li>
-                </Link>
+                </Link> */}
                 <Link href='/contact'>
                   <li id='contact' 
                   className={router.pathname == '/contact' 
@@ -91,11 +70,11 @@ const Navbar = () => {
         <div className={nav ? 'fixed left-[] top-0 w-full h-screen bg-black/70' : ''}>
 
           {/* Side Drawer Menu */}
-          <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
+          <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' : 'fixed left-[-105%] top-0 p-10 ease-in duration-500'}>
             <div>
               <div className='flex w-full items-center justify-between'>
-                <Link onClick={() => setNav(false)} href='/'>
-                  <Image src={Navlog} width='85' height='85' alt='/' />
+                <Link onClick={() => setNav(false)} href='/' className='pt-4 -ml-8'>
+                  <Image src={Navlog} width='105' height='105' alt='/' />
                 </Link>
                 <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
                   <AiOutlineClose />
@@ -116,31 +95,14 @@ const Navbar = () => {
                 <Link href='/services'>
                   <li onClick={() => setNav(false)} id='services' className='py-4 text-sm'>Services</li>
                 </Link>
-                <Link href='/casestudies'>
+                {/* <Link href='/casestudies'>
                   <li onClick={() => setNav(false)} id='casestudies' className='py-4 text-sm'>Case Studies</li>
-                </Link>
+                </Link> */}
                 <Link href='/contact'>
                   <li onClick={() => setNav(false)} id='contact' className='py-4 text-sm'>Contact</li>
                 </Link>
                   
               </ul>
-              <div className="pt-40">
-                <p className="uppercase tracking-widest text-[#5651e5]">Let's Handle Your Cloud-Based Needs</p>
-                <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaLinkedinIn />
-                  </div>
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <FaGithub />
-                  </div>
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <AiOutlineMail />
-                  </div>
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                    <BsFillPersonFill />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
